@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sarveshj.gameconnect3.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/board"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_row="2"
+            android:onClick="dropIn"
+            android:tag="8" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_row="2"
+            android:onClick="dropIn"
+            android:tag="7" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="0"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_row="2"
+            android:onClick="dropIn"
+            android:tag="6" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="2"
+            android:layout_marginLeft="15dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            android:tag="5" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="1"
+            android:layout_marginLeft="3dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            android:tag="4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="0"
+            android:layout_marginLeft="5dp"
+            android:layout_row="1"
+            android:onClick="dropIn"
+            android:tag="3" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:onClick="dropIn"
+            android:tag="2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="1"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:onClick="dropIn"
+            android:tag="1" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_column="0"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="0"
+            android:onClick="dropIn"
+            android:tag="0" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/playAgainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:alpha="1"
+        android:background="#a49b1c"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/winnerMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="playAgain"
+            android:text="Play Again" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rupeeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="29dp"
+        android:text="Rupee:"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/rupeeValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rupeeText"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/rupeeText"
+        android:layout_toRightOf="@+id/rupeeText"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="0"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/euroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rupeeValueText"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:paddingLeft="10dp"
+        android:text="Euro:"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/euroValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/euroText"
+        android:layout_alignBottom="@+id/euroText"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/playAgainLayout"
+        android:layout_toRightOf="@+id/playAgainLayout"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="0"
+        android:textSize="25sp" />
+
+</android.widget.RelativeLayout>
